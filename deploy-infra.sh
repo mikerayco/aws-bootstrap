@@ -13,7 +13,7 @@ aws cloudformation deploy \
     --template-file main.yaml \
     --no-fail-on-empty-changeset \
     --capabilities CAPABILITY_NAMED_IAM \
-    --parameter-overrides EC2_INSTANCE_TYPE=$EC2_INSTANCE_TYPE
+    --parameter-overrides EC2InstanceType=$EC2_INSTANCE_TYPE
 
 if [ $? -eq 0 ]; then
     aws cloudformation list-exports \
